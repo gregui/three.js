@@ -14,7 +14,7 @@ THREE.TrackballControls = function ( object, domElement ) {
 	this.domElement = ( domElement !== undefined ) ? domElement : document;
 
 	// API
-
+mo
 	this.enabled = true;
 
 	this.screen = { left: 0, top: 0, width: 0, height: 0 };
@@ -454,7 +454,9 @@ THREE.TrackballControls = function ( object, domElement ) {
 	}
 
 	function mousewheel( event ) {
-
+		
+		event.preventDefault();
+		
 		if ( _this.enabled === false ) return;
 
 		var delta = 0;
